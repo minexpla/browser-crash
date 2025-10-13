@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>dont open dev tool</title>
+</head>
+<style>
+  .header {
+    text-align: center;
+  }
+  .warning {
+    text-align: center;
+    font-family: Arial;
+    font-size: 100px;
+    color: red;
+  }
+  .guide {
+    text-align: center;
+    font-size: 30px;
+  }
+</style>
+<div id="header">
+  <div class="header">
+browser crasher with DevTools
+</div>
+</div>
+<div id="warning">
+  <div class="warning">
+  your browser will get cooked
+  </div>
+</div>
+<div id="guide">
+  <div class="guide">
+    <li>1. Press <b>CTRL</b>+<b>SHIFT</b>+<b>I</b> to open DevTools</li>
+    <li>2. Wait until you see debugger</li>
+    <li>3. Close DevTools</li>
+    <li>4. hope your pc wont explotano</li>
+  </div>
+</div>
+<div id="button">
+  <button onclick="crash();">Crash manually</button>
+</div>
+<script>
+  function crash() {
+    while(1) location.reload();
+  }
+  setInterval (() => {
+    const a = performance.now();
+    debugger;
+    if (performance.now() - a > 100)
+    while(1) location.reload();
+  }, 1000);
+</script>
+</html>
+
